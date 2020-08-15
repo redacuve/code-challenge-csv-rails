@@ -7,12 +7,16 @@ class StaticPagesController < ApplicationController
   end
 
   def procesar_csv
-    puts "PROCESANDO..."
     archivo = params[:archivo].tempfile
     content_type = params[:archivo].content_type
-    puts params[:archivo].content_type
     if archivo.respond_to?(:read) && content_type == 'text/csv'
-      puts archivo.read
+      Comprador.import(archivo)
+      Item.import(archivo)
+      Vendedor.import(archivo)
+      Transaccion.import(archivo)
+      redirect_to root_url
+    else
+      render :procesar
     end
   end
 end
