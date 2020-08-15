@@ -1,3 +1,17 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<h1>Importacion de archivos CSV</h1>
+<p>
+    Esta aplicacion permite cargar un archivo CSV y lo agrega a la base de datos.
+    Este Archivo debe estar delimitado por tabs, debe tener las siguientes columnas: 
+    <ul>
+    <li>comprador</li>
+    <li>descripción del item</li>
+    <li>precio del item</li>
+    <li>total de items</li>
+    <li>dirección de vendedor</li>
+    <li>vendedor</li>
+    </ul>
+    Además debera tener una columna encabezado con el nombre de las columnas.
+
+    Para proceder a subir el archivo dar click en el siguiente boton.
+</p>
 <%= link_to "Procesar",  procesar_path %>
