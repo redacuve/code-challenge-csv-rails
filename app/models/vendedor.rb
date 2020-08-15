@@ -4,7 +4,7 @@ class Vendedor < ApplicationRecord
   validates :direccion, presence: true
 
   def self.import(archivo)
-    CSV.foreach(archivo, headers: true) do |row|
+    CSV.foreach(archivo, headers: true, col_sep: "\t") do |row|
       row_hash = row.to_hash
       unless self.exists?(nombre: row_hash["vendedor"], direccion: row_hash["direccion de vendedor"])
         self.create(nombre: row_hash["vendedor"], direccion: row_hash["direccion de vendedor"])

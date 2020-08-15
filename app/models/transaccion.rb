@@ -5,7 +5,7 @@ class Transaccion < ApplicationRecord
   validates :total_items, presence: true, numericality: { greater_than: 0 }
 
   def self.import(archivo)
-    CSV.foreach(archivo, headers: true) do |row|
+    CSV.foreach(archivo, headers: true, col_sep: "\t") do |row|
       row_hash = row.to_hash
       self.create(total_items: row_hash["total de items"],
                   item_id: Item.find_by(descripcion: row_hash["descripcion del item"],
