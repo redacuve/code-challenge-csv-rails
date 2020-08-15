@@ -32,7 +32,7 @@ class VendedorTest < ActiveSupport::TestCase
   end
 
   test "no deberia guardar vendedor con nombre mayor a 200 caracteres" do
-    vendedor = Vendedor.new(nombre: "R"*200, direccion: "")
+    vendedor = Vendedor.new(nombre: "R" * 201, direccion: "")
     assert_not vendedor.save
   end
 end

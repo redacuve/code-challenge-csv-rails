@@ -1,6 +1,7 @@
 class Item < ApplicationRecord
-  require 'csv'
   has_many :transaccions
+  validates :descripcion, presence: true
+  validates :precio, presence: true, numericality: { greater_than: 0 }
 
   def self.import(archivo)
     CSV.foreach(archivo, headers: true) do |row|

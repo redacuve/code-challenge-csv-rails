@@ -1,8 +1,8 @@
 class Transaccion < ApplicationRecord
-  require 'csv'
   belongs_to :item
   belongs_to :vendedor
   belongs_to :comprador
+  validates :total_items, presence: true, numericality: { greater_than: 0 }
 
   def self.import(archivo)
     CSV.foreach(archivo, headers: true) do |row|
