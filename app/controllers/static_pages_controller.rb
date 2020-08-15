@@ -4,7 +4,6 @@ class StaticPagesController < ApplicationController
   end
 
   def procesar
-
   end
 
   def procesar_csv
@@ -23,5 +22,4 @@ class StaticPagesController < ApplicationController
       render :procesar
     end
   end
-
 end
