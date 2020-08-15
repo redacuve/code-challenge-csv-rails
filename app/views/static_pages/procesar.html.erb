@@ -1,5 +1,5 @@
 <h1>Procesar</h1>
-<%= form_with(url: procesar_path, local: true) do %>
+<%= form_with(url: procesar_path, local: true, multipart: true) do %>
     <%= label_tag(:archivo, "Subir Archivo") %>
     <%= file_field_tag(:archivo, accept: 'text/csv') %>
     <%= submit_tag("Enviar") %>
