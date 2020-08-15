@@ -11,14 +11,16 @@
 
 <!-- Project Header -->
   <p align="center">
+  <img src="logo.png" width="250">
   <h1 align="center">Coding Challenge: CSV a Base de datos. </h1>
+  <br>
   <p align="center">
   <br>
    <a href="https://github.com/redacuve/code-challenge-csv-rails"><strong>Explora el repositorio »</strong></a>
   <br>
     <a href="https://github.com/redacuve/code-challenge-csv-rails/issues">Solicita una mejora/caracteristica </a>
   </p>
-  <h2 align="center"><a href=""><strong>¡App en linea!</strong></a></h2>
+  <h2 align="center"><a href="https://code-challenge-csv-rails.herokuapp.com/"><strong>¡App en linea!</strong></a></h2>
 
 <!-- INDICE DE CONTENIDO -->
 
