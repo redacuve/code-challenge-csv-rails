@@ -1,17 +1,18 @@
-<h1>Importacion de archivos CSV</h1>
+<h1 class="text-black text-2xl font-bold py-3">Importacion de archivos CSV</h1>
 <p>
     Esta aplicacion permite cargar un archivo CSV y lo agrega a la base de datos.
-    Este Archivo debe estar delimitado por tabs, debe tener las siguientes columnas: 
-    <ul>
-    <li>comprador</li>
-    <li>descripción del item</li>
-    <li>precio del item</li>
-    <li>total de items</li>
-    <li>dirección de vendedor</li>
-    <li>vendedor</li>
-    </ul>
-    Además debera tener una columna encabezado con el nombre de las columnas.
-
-    Para proceder a subir el archivo dar click en el siguiente boton.
+    Este Archivo debe estar delimitado por tabs, debe tener las siguientes columnas:
 </p>
-<%= link_to "Procesar",  procesar_path %>
+    <ul class="list-disc ml-6 mb-4">
+    <li class="font-bold">comprador</li>
+    <li class="font-bold">descripción del item</li>
+    <li class="font-bold">precio del item</li>
+    <li class="font-bold">total de items</li>
+    <li class="font-bold">dirección de vendedor</li>
+    <li class="font-bold">vendedor</li>
+    </ul>
+<p class="mb-6">
+    Además debera tener una columna encabezado con el nombre de las columnas.
+    Para proceder a subir el archivo dar click en el siguiente botón.
+</p>
+<%= link_to "Procesar",  procesar_path, class: "bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" %>
