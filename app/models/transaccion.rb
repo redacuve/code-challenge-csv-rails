@@ -1,5 +1,5 @@
 class Transaccion < ApplicationRecord
-  belongs_to :item_id
-  belongs_to :vendedor_id
-  belongs_to :comprador_id
+  belongs_to :item
+  belongs_to :vendedor
+  belongs_to :comprador
 end
