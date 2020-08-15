@@ -1,4 +1,5 @@
 class StaticPagesController < ApplicationController
+  require 'csv'
   def index
   end
 
@@ -14,9 +15,13 @@ class StaticPagesController < ApplicationController
       Item.import(archivo)
       Vendedor.import(archivo)
       Transaccion.import(archivo)
+      filas_procesadas = CSV.parse(archivo).size - 1
+      flash[:success] = "Total de Transacciones procesadas: #{filas_procesadas}"
       redirect_to root_url
     else
+      flash[:error] = "Solo se permiten archivos con extension .CSV"
       render :procesar
     end
   end
+
 end
